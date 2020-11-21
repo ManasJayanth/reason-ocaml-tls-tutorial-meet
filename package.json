@@ -1,0 +1,51 @@
+{
+  "name": "my-new-project",
+  "version": "0.1.0",
+  "description": "Starter Reason Project",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "buildDev": "pesy build",
+    "release": {
+      "rewritePrefix": true,
+      "releasedBinaries": [
+        "MyNewProjectApp"
+      ]
+    }
+  },
+  "pesy": {
+    "azure-project": "esy-dev/esy",
+    "github": "esy/pesy-reason-template"
+  },
+  "buildDirs": {
+    "library": {},
+    "bin": {
+      "imports": [
+	"Unix = require('unix')",
+	"Lwt = require('@opam/lwt')",
+	"LwtUnix = require('@opam/lwt/unix')",
+        "Tls = require('@opam/tls')",
+        "TlsLwt = require('@opam/tls/lwt')",
+        "Library = require('my-new-project/library')"
+      ],
+      "bin": {
+        "MyNewProjectApp": "MyNewProjectApp.re"
+      }
+    }
+  },
+  "scripts": {
+    "start": "esy x MyNewProjectApp"
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/dune": "*",
+    "@opam/lwt": "5.3.0",
+    "@opam/tls": "0.12.6",
+    "@pesy/esy-pesy": "0.1.0-alpha.11",
+    "ocaml": "~4.9.0"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam",
+    "refmterr": "*"
+  }
+}
