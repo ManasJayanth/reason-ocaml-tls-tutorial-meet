@@ -1,0 +1,8 @@
+* CI failure
+  
+  CI failed during =esy install= with rename failure. The sources and
+  build directory were in =D:\..= where as the =HOME= was in =C:\=
+
+  Tried fixing by overriding the =System.DefaultWorkingDirectory= in
+  the settings that appear when re-running the pipeline.
+
