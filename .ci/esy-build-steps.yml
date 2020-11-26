@@ -11,11 +11,12 @@ steps:
   - script: "esy install --cache-tarballs-path=$(Agent.HomeDirectory)/esy-sources"
     displayName: "esy install"
     condition: eq(variables['AGENT.OS'], 'Linux')
-  - bash: ls $HOME/.esy
-  # - template: utils/publish-sources.yml
-  # - template: utils/restore-build-cache.yml
-  # - script: "esy build --release"
-  #   displayName: "esy build --release"
-  # - script: "esy release"
-  #   displayName: "esy release"
-  # - template: utils/publish-build-cache.yml
+  - bash: ls -R $HOME
+    displayName: "Display contents of $HOME"
+  - template: utils/publish-sources.yml
+  - template: utils/restore-build-cache.yml
+  - script: "esy build --release"
+    displayName: "esy build --release"
+  - script: "esy release"
+    displayName: "esy release"
+  - template: utils/publish-build-cache.yml
