@@ -6,7 +6,7 @@ only file edited on the call were `bin/MyNewProjectApp.re` and
 
 ## Notes from the call Resources
 
-1. Great series of videos: https://www.youtube.com/watch?v=0TLDTodL7Lc
+1. Videos: https://www.youtube.com/watch?v=0TLDTodL7Lc
 2. Cipher suite: `ECDHE-RSA-AES128-GCM-SHA256`
 3. Bitcoin Pinate that mirage team used to test the TLS
    implementation: http://ownme.ipredator.se/
