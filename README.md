@@ -8,7 +8,7 @@ only file edited on the call were `bin/MyNewProjectApp.re` and
 
 1. Videos: https://www.youtube.com/watch?v=0TLDTodL7Lc
 2. Cipher suite: `ECDHE-RSA-AES128-GCM-SHA256`
-3. Bitcoin Pinate that mirage team used to test the TLS
+3. Bitcoin Pinata that mirage team used to test the TLS
    implementation: http://ownme.ipredator.se/
 4. OpenSSL tutorial in C/C++
 	https://opensource.com/article/19/6/cryptography-basics-openssl-part-1
